@@ -10,10 +10,10 @@ import { ListResponseModel } from '../models/result/list-response-model';
 })
 export class BrandService {
 
-  url=ApiUrl+"brands/"
-  constructor(private httpClient:HttpClient) { }
+  url = ApiUrl + "brands/"
+  constructor(private httpClient: HttpClient) { }
 
-  getAll():Observable<ListResponseModel<Brand>>{
-    return this.httpClient.get<ListResponseModel<Brand>>(this.url+"getAll");
+  getAll(): Observable<ListResponseModel<Brand>> {
+    return this.httpClient.get<ListResponseModel<Brand>>(this.url + "getAll");
   }
 }

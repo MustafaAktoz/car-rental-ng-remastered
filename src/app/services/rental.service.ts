@@ -3,7 +3,7 @@ import { ApiUrl } from './../models/constants/urls';
 import { ListResponseModel } from './../models/result/list-response-model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RentalDetailDTO } from '../models/dtos/rental-detail-dto';
+import { RentalDetailDTO } from '../models/entities/dtos/rental-detail-dto';
 
 @Injectable({
   providedIn: 'root'

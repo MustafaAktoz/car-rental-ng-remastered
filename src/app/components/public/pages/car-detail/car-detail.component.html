@@ -1,0 +1,14 @@
+<app-car-images-slider-by-car-id></app-car-images-slider-by-car-id>
+<div class="card text-center" *ngIf="carDetailDto">
+    <div class="card-header">
+        {{carDetailDto.brandName}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{carDetailDto.name}}</h5>
+        <p class="card-text">{{carDetailDto.description}}</p>
+        <a class="btn btn-success">Kirala</a>
+    </div>
+    <div class="card-footer text-muted">
+        <strong>{{carDetailDto.dailyPrice|currency}}</strong>
+    </div>
+</div>

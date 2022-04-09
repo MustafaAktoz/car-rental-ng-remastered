@@ -1,4 +1,6 @@
+import { BrandListPath, CarDetailListPath, ColorListPath, CustomerListPath, RentalDetailListPath } from './../../../../models/constants/paths';
 import { Component, OnInit } from '@angular/core';
+import { RouterService } from 'src/app/services/router.service';
 
 @Component({
   selector: 'app-navi',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaviComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routerService: RouterService) { }
 
   ngOnInit(): void {
   }
 
+  routeToCarDetailList() { this.routerService.routeToCarDetailList() }
+  routeToBrandList() { this.routerService.routeToBrandList() }
+  routeToColorList() { this.routerService.routeToColorList() }
+  routeToRentalDetailList() { this.routerService.routeToRentalDetailList() }
+  routeToCustomerList() { this.routerService.routeToCustomerList() }
 }
