@@ -2,7 +2,7 @@ import { BaseUrl } from '../../../../models/constants/urls';
 import { ActivatedRoute } from '@angular/router';
 import { CarImageService } from '../../../../services/car-image.service';
 import { CarImage } from '../../../../models/entities/car-image';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-car-images-slider-by-car-id',
@@ -11,14 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarImagesSliderByCarIdComponent implements OnInit {
 
+  @Input() currentCarIdFromParent: number
   carImages: CarImage[]
-  constructor(private carImagesService: CarImageService, private activatedRoute: ActivatedRoute) { }
+  constructor(private carImagesService: CarImageService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params["carId"])
-      this.getAllByCarId(params["carId"])
-    })
+    if (this.currentCarIdFromParent)
+      this.getAllByCarId(this.currentCarIdFromParent)
   }
 
   getAllByCarId(carId: number) {
@@ -27,13 +26,13 @@ export class CarImagesSliderByCarIdComponent implements OnInit {
     })
   }
 
-  imageConfiguration(imagePath:string){
-    return BaseUrl+imagePath;
+  imageConfiguration(imagePath: string) {
+    return BaseUrl + imagePath;
   }
 
-  getActiveString(carImage:CarImage){
-    if(carImage===this.carImages[0])
-    return "active"
+  getActiveString(carImage: CarImage) {
+    if (carImage === this.carImages[0])
+      return "active"
 
     return ""
   }

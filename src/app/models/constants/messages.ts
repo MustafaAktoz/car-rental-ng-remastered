@@ -1,0 +1,1 @@
+export const FormIsMissing="Form bilgileri eksik"

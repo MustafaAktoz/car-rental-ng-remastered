@@ -1,3 +1,4 @@
+<input type="text" id="filterText" [(ngModel)]="filterText" placeholder="Arama metni giriniz" class="form-control">
 <table class="table">
     <thead>
         <tr>
@@ -6,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let brand of brands">
+        <tr *ngFor="let brand of brands|brandsFilter:filterText">
             <td>{{brand.id}}</td>
             <td>{{brand.name}}</td>
         </tr>

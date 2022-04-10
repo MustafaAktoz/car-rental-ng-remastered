@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandListComponent implements OnInit {
 
+  filterText:string
   brands:Brand[]
   constructor(private brandService:BrandService) { }
 

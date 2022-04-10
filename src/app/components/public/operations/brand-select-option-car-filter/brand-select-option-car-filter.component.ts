@@ -30,6 +30,6 @@ export class BrandSelectOptionCarFilterComponent implements OnInit {
   }
 
   routeToCarDetailsByBrandId() {
-    this.routerService.routeToCarDetailsByBrandId(this.currentBrandId)
+    this.routerService.carDetailsByBrandId(this.currentBrandId)
   }
 }

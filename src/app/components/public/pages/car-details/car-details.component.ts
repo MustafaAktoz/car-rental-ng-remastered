@@ -11,6 +11,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarDetailsComponent implements OnInit {
 
+  filterText:string
   carDetailDTOs: CarDetailDTO[]
   constructor(private carService: CarService, private activatedRoute: ActivatedRoute,
     private router:Router) { }

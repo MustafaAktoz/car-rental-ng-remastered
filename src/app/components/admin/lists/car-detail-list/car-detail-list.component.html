@@ -1,3 +1,4 @@
+<input type="text" id="filterText" [(ngModel)]="filterText" placeholder="Arama metni giriniz" class="form-control">
 <table class="table">
     <thead>
         <tr>
@@ -11,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let carDetailDTO of carDetailDTOs">
+        <tr *ngFor="let carDetailDTO of carDetailDTOs|carDetailsFilter:filterText">
             <td>{{carDetailDTO.id}}</td>
             <td>{{carDetailDTO.name}}</td>
             <td>{{carDetailDTO.brandName}}</td>

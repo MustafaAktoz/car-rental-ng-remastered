@@ -14,9 +14,9 @@ export class NaviComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  routeToCarDetailList() { this.routerService.routeToCarDetailList() }
-  routeToBrandList() { this.routerService.routeToBrandList() }
-  routeToColorList() { this.routerService.routeToColorList() }
-  routeToRentalDetailList() { this.routerService.routeToRentalDetailList() }
-  routeToCustomerList() { this.routerService.routeToCustomerList() }
+  routeToCarDetailList() { this.routerService.carDetailList() }
+  routeToBrandList() { this.routerService.brandList() }
+  routeToColorList() { this.routerService.colorList() }
+  routeToRentalDetailList() { this.routerService.rentalDetailList() }
+  routeToCustomerList() { this.routerService.customerList() }
 }

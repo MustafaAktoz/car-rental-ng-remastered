@@ -9,6 +9,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarDetailListComponent implements OnInit {
 
+  filterText:string
   carDetailDTOs: CarDetailDTO[]
   constructor(private carService: CarService) { }
 

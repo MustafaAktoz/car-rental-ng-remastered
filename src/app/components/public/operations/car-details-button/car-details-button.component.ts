@@ -14,6 +14,6 @@ export class CarDetailsButtonComponent implements OnInit {
   }
 
   routeToCarDetails(){
-    this.routerService.routeToCarDetails()
+    this.routerService.carDetails()
   }
 }

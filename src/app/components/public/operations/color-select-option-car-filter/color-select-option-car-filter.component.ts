@@ -1,6 +1,6 @@
 import { RouterService } from 'src/app/services/router.service';
-import { Color } from './../../../../models/entities/color';
-import { ColorService } from './../../../../services/color.service';
+import { Color } from '../../../../models/entities/color';
+import { ColorService } from '../../../../services/color.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -30,6 +30,6 @@ export class ColorSelectOptionCarFilterComponent implements OnInit {
   }
 
   routeToCarDetailsByColorId(){
-    this.routerService.routeToCarDetailsByColorId(this.currentColorId)
+    this.routerService.carDetailsByColorId(this.currentColorId)
   }
 }

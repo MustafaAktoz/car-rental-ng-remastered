@@ -1,3 +1,4 @@
+import { PayPath, RentByCarIdPath } from './../models/constants/paths';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsByColorIdPath, CarDetailsPath, ColorListPath, CustomerListPath, RentalDetailListPath } from '../models/constants/paths';
@@ -9,35 +10,43 @@ export class RouterService {
 
   constructor(private router: Router) { }
 
-  routeToCarDetailList() {
+  carDetailList() {
     this.router.navigate([CarDetailListPath])
   }
 
-  routeToCarDetails() {
+  carDetails() {
     this.router.navigate([CarDetailsPath])
   }
 
-  routeToBrandList() {
+  brandList() {
     this.router.navigate([BrandListPath])
   }
 
-  routeToColorList() {
+  colorList() {
     this.router.navigate([ColorListPath])
   }
 
-  routeToRentalDetailList() {
+  rentalDetailList() {
     this.router.navigate([RentalDetailListPath])
   }
 
-  routeToCustomerList() {
+  customerList() {
     this.router.navigate([CustomerListPath])
   }
 
-  routeToCarDetailsByBrandId(currentBrandId: number) {
+  carDetailsByBrandId(currentBrandId: number) {
     if (currentBrandId > 0) this.router.navigate([CarDetailsByBrandIdPath + currentBrandId])
   }
 
-  routeToCarDetailsByColorId(currentColorId: number) {
+  carDetailsByColorId(currentColorId: number) {
     if (currentColorId > 0) this.router.navigate([CarDetailsByColorIdPath + currentColorId])
+  }
+
+  rentByCarId(currentCarId: number) {
+    if (currentCarId > 0) this.router.navigate([RentByCarIdPath + currentCarId])
+  }
+
+  payment() {
+    this.router.navigate([PayPath])
   }
 }

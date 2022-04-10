@@ -1,8 +1,12 @@
 <div>
+    <input type="text" id="filterText" name="filterText" class="form-control" placeholder="Arama metni giriniz" [(ngModel)]="filterText">
     <app-brand-and-color-select-option-car-filter></app-brand-and-color-select-option-car-filter>
     <div class="row d-flex justify-content-between">
-        <div class="card mt-4" style="width: 19rem;" *ngFor="let carDetailDTO of carDetailDTOs">
-            <div class="card-body">
+        <div class="card mt-4" style="width: 19rem;" *ngFor="let carDetailDTO of carDetailDTOs|carDetailsFilter:filterText">
+            <div class="mt-2" style="height: 125px;">
+                <app-car-images-slider-by-car-id [currentCarIdFromParent]="carDetailDTO.id" ></app-car-images-slider-by-car-id>
+            </div>
+        <div class="card-body">
                 <h5 class="card-title">{{carDetailDTO.name}}</h5>
                 <p class="card-text">{{carDetailDTO.description}}.</p>
             </div>
@@ -11,9 +15,9 @@
                 <li class="list-group-item">{{carDetailDTO.colorName}}</li>
                 <li class="list-group-item"><strong>{{carDetailDTO.dailyPrice|currency}}</strong></li>
             </ul>
-            <div class="card-body row">
-                <button class="btn btn-info col" (click)="routeToCarDetailById(carDetailDTO.id)">Detaylar</button>
-                <button class="btn btn-success col ms-3">Kirala</button>
+            <div class="card-body">
+                <button class="btn btn-info d-grid gap-2 col-12 mb-1" (click)="routeToCarDetailById(carDetailDTO.id)">Detaylar</button>
+                <app-rent-button [currentCarIdFromParent]="carDetailDTO.id"></app-rent-button>
             </div>
         </div>
     </div>
