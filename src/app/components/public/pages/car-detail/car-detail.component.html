@@ -9,7 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{carDetailDto.name}}</h5>
             <p class="card-text">{{carDetailDto.description}}</p>
-            <app-rent-button [currentCarIdFromParent]="carDetailDto.id"></app-rent-button>
+            <app-route-to-rent-page-button [currentCarIdFromParent]="carDetailDto.id"></app-route-to-rent-page-button>
         </div>
         <div class="card-footer text-muted">
             <strong>{{carDetailDto.dailyPrice|currency}}</strong>

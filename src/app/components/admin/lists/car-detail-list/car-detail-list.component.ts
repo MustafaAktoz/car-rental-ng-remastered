@@ -32,7 +32,7 @@ export class CarDetailListComponent implements OnInit {
     })
   }
 
-  getByIdInMemory(id:number):Car{
+  getByIdFromInMemory(id:number):Car{
     return this.cars.filter(c=>c.id==id)[0]
   }
 }

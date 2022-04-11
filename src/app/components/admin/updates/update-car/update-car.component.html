@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-    [attr.data-bs-target]="'#exampleModal'+currentCarFromParent.id">
+    [attr.data-bs-target]="'#exampleModal'+currentCarFromParent.id" *ngIf="currentCarFromParent">
     Güncelle
 </button>
 

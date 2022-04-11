@@ -10,19 +10,19 @@ export class TemplatesService {
 
   errorResponse(errorResponse: any) {
     this.errorResultResponse(errorResponse)
-    this.standardExceptionErrorResponse(errorResponse)
-    this.fluentValidationExceptionErrorResponse(errorResponse)
+    this.standardExceptionResponse(errorResponse)
+    this.fluentValidationExceptionResponse(errorResponse)
   }
 
   private errorResultResponse(errorResponse: any) {
     if (errorResponse.error.message) this.toastrService.error(errorResponse.error.message)
   }
 
-  private standardExceptionErrorResponse(errorResponse: any){
+  private standardExceptionResponse(errorResponse: any){
     if (errorResponse.error.Message) this.toastrService.error(errorResponse.error.Message)
   }
 
-  private fluentValidationExceptionErrorResponse(errorResponse: any) {
+  private fluentValidationExceptionResponse(errorResponse: any) {
     if (errorResponse.error.FluentValidationErrors) {
       for (let i = 0; i < errorResponse.error.FluentValidationErrors.length; i++)
         this.toastrService.error(errorResponse.error.FluentValidationErrors[i].ErrorMessage);

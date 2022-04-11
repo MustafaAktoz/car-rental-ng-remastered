@@ -1,3 +1,4 @@
+import { BrandId } from './../../../../models/constants/entity-ids';
 import { RouterService } from 'src/app/services/router.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -19,7 +20,7 @@ export class BrandSelectOptionCarFilterComponent implements OnInit {
     this.getAll()
 
     this.activatedRoute.params.subscribe(params => {
-      this.currentBrandId = params["brandId"]
+      this.currentBrandId = params[BrandId]
     })
   }
 
@@ -29,7 +30,7 @@ export class BrandSelectOptionCarFilterComponent implements OnInit {
     })
   }
 
-  routeToCarDetailsByBrandId() {
-    this.routerService.carDetailsByBrandId(this.currentBrandId)
+  routeToCarDetailsPageByBrandId() {
+    this.routerService.carDetailsPageByBrandId(this.currentBrandId)
   }
 }

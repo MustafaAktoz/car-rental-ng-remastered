@@ -1,3 +1,4 @@
+import { RouterService } from './router.service';
 import { TemplatesService } from './templates.service';
 import { ToastrService } from 'ngx-toastr';
 import { ApiUrl } from './../models/constants/urls';
@@ -15,9 +16,7 @@ export class PaymentService {
   constructor(private httpClient:HttpClient,private toastrService:ToastrService,private templatesService:TemplatesService) { }
 
   pay(payment:Payment){
-    this.httpClient.post<ResponseModel>(this.url+"pay",payment).subscribe(response=>{
-      this.toastrService.success(response.message)
-    },errorResponse=>this.templatesService.errorResponse(errorResponse))
+    return this.httpClient.post<ResponseModel>(this.url+"pay",payment)
   }
 
   add(payment:Payment){

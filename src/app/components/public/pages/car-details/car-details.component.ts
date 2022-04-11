@@ -1,3 +1,4 @@
+import { BrandId, ColorId } from './../../../../models/constants/entity-ids';
 import { CarDetailByIdPath } from './../../../../models/constants/paths';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -18,11 +19,10 @@ export class CarDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      if (params["brandId"]) this.getDetailsByBrandId(params["brandId"])
-      else if (params["colorId"]) this.getDetailsByColorId(params["colorId"])
+      if (params[BrandId]) this.getDetailsByBrandId(params[BrandId])
+      else if (params[ColorId]) this.getDetailsByColorId(params[ColorId])
       else this.getDetails();
     })
-
   }
 
   getDetails() {

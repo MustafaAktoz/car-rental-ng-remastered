@@ -1,5 +1,4 @@
 import { BaseUrl } from '../../../../models/constants/urls';
-import { ActivatedRoute } from '@angular/router';
 import { CarImageService } from '../../../../services/car-image.service';
 import { CarImage } from '../../../../models/entities/car-image';
 import { Component, Input, OnInit } from '@angular/core';

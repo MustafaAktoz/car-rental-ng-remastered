@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+currentColorFromParent.id">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+currentColorFromParent.id" *ngIf="currentColorFromParent">
     Güncelle
 </button>
 
@@ -24,7 +24,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button class="btn btn-success" (click)="update()">Ekle</button>
+                <button class="btn btn-success" (click)="update()">Güncelle</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
-<div [id]="'example'+currentCarIdFromParent" class="carousel slide" data-bs-ride="carousel" *ngIf="currentCarIdFromParent">
+<div [id]="'example'+currentCarIdFromParent" class="carousel slide" data-bs-ride="carousel"
+  *ngIf="currentCarIdFromParent">
   <div class="carousel-inner">
     <div class="carousel-item {{getActiveString(carImage)}}" data-bs-interval="10000"
       *ngFor="let carImage of carImages">

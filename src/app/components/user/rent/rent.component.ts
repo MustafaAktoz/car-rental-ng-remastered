@@ -1,3 +1,4 @@
+import { CarId } from './../../../models/constants/entity-ids';
 import { FormIsMissing } from './../../../models/constants/messages';
 import { ToastrService } from 'ngx-toastr';
 import { TemplatesService } from './../../../services/templates.service';
@@ -27,8 +28,8 @@ export class RentComponent implements OnInit {
   ngOnInit(): void {
     this.createAddFormGroup()
     this.activatedRoute.params.subscribe(params => {
-      if (params["carId"])
-        this.currentCarId = params["carId"]
+      if (params[CarId])
+        this.currentCarId = params[CarId]
     })
   }
 
@@ -46,7 +47,7 @@ export class RentComponent implements OnInit {
       rental.customerId = 2
       this.rentalService.rulesForAdding(rental).subscribe(response => {
         this.localStorageService.save(RentalKey, rental)
-        this.routerService.payment()
+        this.routerService.paymentPage()
       },errorResponse=>this.templatesService.errorResponse(errorResponse))
     }
     else {

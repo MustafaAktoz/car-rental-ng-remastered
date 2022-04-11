@@ -1,3 +1,4 @@
+import { BrandId, ColorId, CarId } from './models/constants/entity-ids';
 import { AddCarComponent } from './components/admin/adds/add-car/add-car.component';
 import { RentComponent } from './components/user/rent/rent.component';
 import { DefaultPath, CarDetailsPath, CarDetailsByBrandIdPath, CarDetailByIdPath, BrandListPath, ColorListPath, CustomerListPath, CarDetailListPath, RentalDetailListPath, CarDetailsByColorIdPath, RentByCarIdPath, PayPath, AddCarPath, AddBrandPath, AddColorPath } from './models/constants/paths';
@@ -17,15 +18,15 @@ import { AddColorComponent } from './components/admin/adds/add-color/add-color.c
 const routes: Routes = [
   { path: DefaultPath, component: CarDetailsComponent },
   { path: CarDetailsPath, component: CarDetailsComponent },
-  { path: CarDetailsByBrandIdPath + ":brandId", component: CarDetailsComponent },
-  { path: CarDetailsByColorIdPath + ":colorId", component: CarDetailsComponent },
-  { path: CarDetailByIdPath + ":carId", component: CarDetailComponent },
+  { path: CarDetailsByBrandIdPath + ":" + BrandId, component: CarDetailsComponent },
+  { path: CarDetailsByColorIdPath + ":" + ColorId, component: CarDetailsComponent },
+  { path: CarDetailByIdPath + ":" + CarId, component: CarDetailComponent },
   { path: BrandListPath, component: BrandListComponent },
   { path: ColorListPath, component: ColorListComponent },
   { path: CustomerListPath, component: CustomerListComponent },
   { path: CarDetailListPath, component: CarDetailListComponent },
   { path: RentalDetailListPath, component: RentalDetailListComponent },
-  { path: RentByCarIdPath+ ":carId", component: RentComponent },
+  { path: RentByCarIdPath+ ":" + CarId, component: RentComponent },
   { path: PayPath, component: PayComponent },
   { path: AddCarPath, component: AddCarComponent },
   { path: AddBrandPath, component: AddBrandComponent },

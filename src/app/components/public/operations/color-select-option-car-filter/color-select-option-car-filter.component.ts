@@ -1,3 +1,4 @@
+import { ColorId } from './../../../../models/constants/entity-ids';
 import { RouterService } from 'src/app/services/router.service';
 import { Color } from '../../../../models/entities/color';
 import { ColorService } from '../../../../services/color.service';
@@ -19,7 +20,7 @@ export class ColorSelectOptionCarFilterComponent implements OnInit {
     this.getAll();
 
     this.activatedRoute.params.subscribe(params=>{
-      this.currentColorId=params["colorId"]
+      this.currentColorId=params[ColorId]
     })
   }
 
@@ -29,7 +30,7 @@ export class ColorSelectOptionCarFilterComponent implements OnInit {
     })
   }
 
-  routeToCarDetailsByColorId(){
-    this.routerService.carDetailsByColorId(this.currentColorId)
+  routeToCarDetailsPageByColorId(){
+    this.routerService.carDetailsPageByColorId(this.currentColorId)
   }
 }

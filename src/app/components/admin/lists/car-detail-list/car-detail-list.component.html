@@ -21,7 +21,7 @@
             <td>{{carDetailDTO.modelYear}}</td>
             <td>{{carDetailDTO.dailyPrice}}</td>
             <td>{{carDetailDTO.description}}</td>
-            <td><app-update-car [currentCarFromParent]="getByIdInMemory(carDetailDTO.id)"></app-update-car></td>
+            <td><app-update-car [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car></td>
         </tr>
     </tbody>
 </table>

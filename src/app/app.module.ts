@@ -19,12 +19,12 @@ import { BrandAndColorSelectOptionCarFilterComponent } from './components/public
 import { CarDetailsComponent } from './components/public/pages/car-details/car-details.component';
 import { CarDetailComponent } from './components/public/pages/car-detail/car-detail.component';
 import { CarImagesSliderByCarIdComponent } from './components/public/layouts/car-images-slider-by-car-id/car-images-slider-by-car-id.component';
-import { CarDetailsButtonComponent } from './components/public/operations/car-details-button/car-details-button.component';
+import { RouteToCarDetailsPageButtonComponent } from './components/public/operations/route-to-car-details-page-button/route-to-car-details-page-button.component';
 import { CarDetailsFilterPipe } from './pipes/car-details-filter.pipe';
 import { BrandsFilterPipe } from './pipes/brands-filter.pipe';
 import { ColorsFilterPipe } from './pipes/colors-filter.pipe';
 import { RentComponent } from './components/user/rent/rent.component';
-import { RentButtonComponent } from './components/public/operations/rent-button/rent-button.component';
+import { RouteToRentPageButtonComponent } from './components/public/operations/route-to-rent-page-button/route-to-rent-page-button.component';
 import { PayComponent } from './components/user/pay/pay.component';
 import { AddCarComponent } from './components/admin/adds/add-car/add-car.component';
 import { AddBrandComponent } from './components/admin/adds/add-brand/add-brand.component';
@@ -48,12 +48,12 @@ import { UpdateCarComponent } from './components/admin/updates/update-car/update
     CarDetailsComponent,
     CarDetailComponent,
     CarImagesSliderByCarIdComponent,
-    CarDetailsButtonComponent,
+    RouteToCarDetailsPageButtonComponent,
     CarDetailsFilterPipe,
     BrandsFilterPipe,
     ColorsFilterPipe,
     RentComponent,
-    RentButtonComponent,
+    RouteToRentPageButtonComponent,
     PayComponent,
     AddCarComponent,
     AddBrandComponent,

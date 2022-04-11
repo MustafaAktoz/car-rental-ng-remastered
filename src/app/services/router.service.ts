@@ -10,79 +10,55 @@ export class RouterService {
 
   constructor(private router: Router) { }
 
-  addCar() {
+  addCarPage() {
     this.router.navigate([AddCarPath])
   }
 
-  addBrand() {
+  addBrandPage() {
     this.router.navigate([AddBrandPath])
   }
 
-  addColor() {
+  addColorPage() {
     this.router.navigate([AddColorPath])
   }
 
-  updateCar() {
-    this.router.navigate([UpdateCarPath])
-  }
-
-  updateBrand() {
-    this.router.navigate([UpdateBrandPath])
-  }
-
-  updateColor() {
-    this.router.navigate([UpdateColorPath])
-  }
-
-  deleteCar() {
-    this.router.navigate([DeleteCarPath])
-  }
-
-  deleteBrand() {
-    this.router.navigate([DeleteBrandPath])
-  }
-
-  deleteColor() {
-    this.router.navigate([DeleteColorPath])
-  }
-
-  carDetailList() {
+  carDetailListPage() {
     this.router.navigate([CarDetailListPath])
   }
 
-  carDetails() {
+  carDetailsPage() {
     this.router.navigate([CarDetailsPath])
   }
 
-  brandList() {
+  brandListPage() {
     this.router.navigate([BrandListPath])
   }
 
-  colorList() {
+  colorListPage() {
     this.router.navigate([ColorListPath])
   }
 
-  rentalDetailList() {
+  rentalDetailListPage() {
     this.router.navigate([RentalDetailListPath])
   }
 
-  customerList() {
+  customerListPage() {
     this.router.navigate([CustomerListPath])
   }
 
-  carDetailsByBrandId(currentBrandId: number) {
+  carDetailsPageByBrandId(currentBrandId: number) {
     if (currentBrandId > 0) this.router.navigate([CarDetailsByBrandIdPath + currentBrandId])
   }
 
-  carDetailsByColorId(currentColorId: number) {
+  carDetailsPageByColorId(currentColorId: number) {
     if (currentColorId > 0) this.router.navigate([CarDetailsByColorIdPath + currentColorId])
   }
 
-  rentByCarId(currentCarId: number) {
+  rentPage(currentCarId: number) {
     if (currentCarId > 0) this.router.navigate([RentByCarIdPath + currentCarId])
   }
 
-  payment() {
+  paymentPage() {
     this.router.navigate([PayPath])
   }
 }
