@@ -9,6 +9,7 @@
             <th>Model Yılı</th>
             <th>Günlük Fiyat</th>
             <th>Açıklama</th>
+            <th>Seçenekler</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
             <td>{{carDetailDTO.modelYear}}</td>
             <td>{{carDetailDTO.dailyPrice}}</td>
             <td>{{carDetailDTO.description}}</td>
+            <td><app-update-car [currentCarFromParent]="getByIdInMemory(carDetailDTO.id)"></app-update-car></td>
         </tr>
     </tbody>
 </table>

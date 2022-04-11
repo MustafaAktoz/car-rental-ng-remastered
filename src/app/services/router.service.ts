@@ -1,4 +1,4 @@
-import { PayPath, RentByCarIdPath } from './../models/constants/paths';
+import { AddBrandPath, AddCarPath, AddColorPath, DeleteBrandPath, DeleteCarPath, DeleteColorPath, PayPath, RentByCarIdPath, UpdateBrandPath, UpdateCarPath, UpdateColorPath } from './../models/constants/paths';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsByColorIdPath, CarDetailsPath, ColorListPath, CustomerListPath, RentalDetailListPath } from '../models/constants/paths';
@@ -9,6 +9,42 @@ import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsBy
 export class RouterService {
 
   constructor(private router: Router) { }
+
+  addCar() {
+    this.router.navigate([AddCarPath])
+  }
+
+  addBrand() {
+    this.router.navigate([AddBrandPath])
+  }
+
+  addColor() {
+    this.router.navigate([AddColorPath])
+  }
+
+  updateCar() {
+    this.router.navigate([UpdateCarPath])
+  }
+
+  updateBrand() {
+    this.router.navigate([UpdateBrandPath])
+  }
+
+  updateColor() {
+    this.router.navigate([UpdateColorPath])
+  }
+
+  deleteCar() {
+    this.router.navigate([DeleteCarPath])
+  }
+
+  deleteBrand() {
+    this.router.navigate([DeleteBrandPath])
+  }
+
+  deleteColor() {
+    this.router.navigate([DeleteColorPath])
+  }
 
   carDetailList() {
     this.router.navigate([CarDetailListPath])

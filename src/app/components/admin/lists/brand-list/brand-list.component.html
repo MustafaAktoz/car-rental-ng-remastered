@@ -4,12 +4,14 @@
         <tr>
             <th>Id</th>
             <th>Marka</th>
+            <th>Seçenekler</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let brand of brands|brandsFilter:filterText">
             <td>{{brand.id}}</td>
             <td>{{brand.name}}</td>
+            <td><app-update-brand [currentBrandFromParent]="brand"></app-update-brand></td>
         </tr>
     </tbody>
 </table>

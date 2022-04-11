@@ -10,3 +10,15 @@ export const CarDetailListPath="car-detail-list"
 export const RentalDetailListPath="rental-detail-list"
 export const RentByCarIdPath="rent/"
 export const PayPath="pay"
+
+export const AddCarPath="add-car"
+export const AddBrandPath="add-brand"
+export const AddColorPath="add-color"
+
+export const UpdateCarPath="update-car"
+export const UpdateBrandPath="update-brand"
+export const UpdateColorPath="update-color"
+
+export const DeleteCarPath="delete-car"
+export const DeleteBrandPath="delete-brand"
+export const DeleteColorPath="delete-color"

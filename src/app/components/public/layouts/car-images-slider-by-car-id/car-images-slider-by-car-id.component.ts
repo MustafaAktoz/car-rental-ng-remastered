@@ -10,8 +10,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./car-images-slider-by-car-id.component.css']
 })
 export class CarImagesSliderByCarIdComponent implements OnInit {
-
   @Input() currentCarIdFromParent: number
+  
   carImages: CarImage[]
   constructor(private carImagesService: CarImageService) { }
 

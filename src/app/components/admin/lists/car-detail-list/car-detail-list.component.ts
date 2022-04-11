@@ -1,3 +1,4 @@
+import { Car } from './../../../../models/entities/car';
 import { Component, OnInit } from '@angular/core';
 import { CarDetailDTO } from 'src/app/models/entities/dtos/car-detail-dto';
 import { CarService } from 'src/app/services/car.service';
@@ -11,9 +12,11 @@ export class CarDetailListComponent implements OnInit {
 
   filterText:string
   carDetailDTOs: CarDetailDTO[]
+  cars:Car[]
   constructor(private carService: CarService) { }
 
   ngOnInit(): void {
+    this.getAll()
     this.getDetails()
   }
 
@@ -21,5 +24,15 @@ export class CarDetailListComponent implements OnInit {
     this.carService.getDetails().subscribe(response => {
       this.carDetailDTOs = response.data
     })
+  }
+
+  getAll(){
+    this.carService.getAll().subscribe(response=>{
+      this.cars=response.data
+    })
+  }
+
+  getByIdInMemory(id:number):Car{
+    return this.cars.filter(c=>c.id==id)[0]
   }
 }
