@@ -11,6 +11,7 @@ import { Injectable } from '@angular/core';
 import { RentalDetailDTO } from '../models/entities/dtos/rental-detail-dto';
 import { Rental } from '../models/entities/rental';
 import { Payment } from '../models/entities/payment';
+import { SaveYourCreditCard } from '../models/constants/questions';
 
 @Injectable({
   providedIn: 'root'
@@ -25,13 +26,13 @@ export class RentalService {
     this.paymentService.pay(payment).subscribe(response => {
       this.toastrService.success(response.message)
       this.add(rental)
-      this.routerService.carDetailsPage()
     }, errorResponse => this.templatesService.errorResponse(errorResponse))
   }
 
   add(rental: Rental) {
     this.httpClient.post<ResponseModel>(this.url + "add", rental).subscribe(response => {
       this.toastrService.success(response.message)
+      this.routerService.homePage()
     }, errorResponse => this.templatesService.errorResponse(errorResponse));
   }
 

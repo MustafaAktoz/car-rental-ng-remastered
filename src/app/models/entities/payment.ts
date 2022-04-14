@@ -4,6 +4,6 @@ export interface Payment{
     fullName:string
     cardNumber:string
     cvv:string
-    expiryMouth:string
+    expiryMonth:string
     expiryYear:string
 }

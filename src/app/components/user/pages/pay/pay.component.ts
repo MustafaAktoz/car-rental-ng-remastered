@@ -30,7 +30,7 @@ export class PayComponent implements OnInit {
       fullName: ["", Validators.required],
       cardNumber: ["", Validators.required],
       cvv: ["", Validators.required],
-      expiryMouth: ["", Validators.required],
+      expiryMonth: ["", Validators.required],
       expiryYear: ["", Validators.required],
     })
   }
@@ -39,17 +39,16 @@ export class PayComponent implements OnInit {
     if (this.payFormGroup.valid) {
       let rental: Rental = this.localStorageService.get(RentalKey)
       let payment: Payment = Object.assign({ customerId: rental.customerId }, this.payFormGroup.value)
-      this.payAndRent(payment, rental)
+
+      this.askForSave(payment)
+      this.rentalService.payAndRent(payment, rental)
     }
     else this.toastrService.error(FormIsMissing)
   }
 
-  private payAndRent(payment: Payment, rental: Rental) {
-    this.paymentService.checkIfThisCardIsAlreadyRegisteredForThisCustomer(payment).subscribe(response => {
-      if (response.success)
-        if (confirm(SaveYourCreditCard)) this.paymentService.add(payment);
-
-      this.rentalService.payAndRent(payment, rental);
+  askForSave(payment:Payment){
+    this.paymentService.checkIfThisCardIsAlreadyRegisteredForThisCustomer(payment).subscribe(response=>{
+      if (confirm(SaveYourCreditCard)) this.paymentService.add(payment);
     })
   }
 }
