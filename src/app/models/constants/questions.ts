@@ -1,0 +1,1 @@
+export const SaveYourCreditCard = "Ödeme bilginiz kayıt edilsin mi?"

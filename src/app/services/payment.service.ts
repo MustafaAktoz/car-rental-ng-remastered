@@ -1,4 +1,3 @@
-import { RouterService } from './router.service';
 import { TemplatesService } from './templates.service';
 import { ToastrService } from 'ngx-toastr';
 import { ApiUrl } from './../models/constants/urls';
@@ -6,6 +5,7 @@ import { ResponseModel } from './../models/result/response_model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Payment } from '../models/entities/payment';
+import { ListResponseModel } from '../models/result/list-response-model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,11 @@ export class PaymentService {
     },errorResponse=>this.templatesService.errorResponse(errorResponse))
   }
 
-  getByUserId(userId:number){
-    return this.httpClient.get<ResponseModel>(this.url+"getByUserId?userId="+userId)
+  getAllByCustomerId(customerId:number){
+    return this.httpClient.get<ListResponseModel<Payment>>(this.url+"getAllByCustomerId?customerId="+customerId)
+  }
+
+  checkIfThisCardIsAlreadyRegisteredForThisCustomer(payment:Payment){
+    return this.httpClient.post<ResponseModel>(this.url+"checkIfThisCardIsAlreadyRegisteredForThisCustomer",payment);
   }
 }

@@ -1,6 +1,6 @@
 <div *ngIf="carDetailDto">
     <div class="border">
-        <app-car-images-slider-by-car-id [currentCarIdFromParent]="carDetailDto.id" ></app-car-images-slider-by-car-id>
+        <app-car-images-slider-by-car-id [currentCarIdFromParent]="carDetailDto.id"></app-car-images-slider-by-car-id>
     </div>
     <div class="card text-center">
         <div class="card-header">
@@ -9,6 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{carDetailDto.name}}</h5>
             <p class="card-text">{{carDetailDto.description}}</p>
+            <p class="card-text">Findeks Puanı:<strong> {{carDetailDto.findeksPoint}}</strong></p>
             <app-route-to-rent-page-button [currentCarIdFromParent]="carDetailDto.id"></app-route-to-rent-page-button>
         </div>
         <div class="card-footer text-muted">

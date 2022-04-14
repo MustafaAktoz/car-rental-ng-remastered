@@ -1,0 +1,19 @@
+<div>
+    <input type="text" id="filterText" [(ngModel)]="filterText" placeholder="Arama metni giriniz" class="form-control">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Marka</th>
+                <th>Seçenekler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let color of colors|colorsFilter:filterText">
+                <td>{{color.id}}</td>
+                <td>{{color.name}}</td>
+                <td><app-update-color [currentColorFromParent]="color"></app-update-color></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

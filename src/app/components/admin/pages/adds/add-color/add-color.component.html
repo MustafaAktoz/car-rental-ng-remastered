@@ -1,0 +1,10 @@
+<form [formGroup]="addFormGroup">
+    <div>
+        <label for="name">Renk İsmi</label>
+        <input type="text" id="name" name="name" placeholder="Renk İsmi" class="form-control" formControlName="name">
+    </div>
+
+    <div class="mt-2">
+        <button class="btn btn-success" (click)="add()">Ekle</button>
+    </div>
+</form>

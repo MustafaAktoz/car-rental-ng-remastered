@@ -6,4 +6,5 @@ export interface CarDetailDTO{
     modelYear:string
     dailyPrice:number
     description:string
+    findeksPoint:number
 }

@@ -1,0 +1,20 @@
+<body class="text-center">
+    <main class="form-signin">
+        <form [formGroup]="loginFormGroup">
+            <img class="mb-4" src="https://pbs.twimg.com/profile_images/1471565705388728323/vDCT9Ygt_400x400.jpg" alt="" width="80" height="80">
+            <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" placeholder="Şifre" formControlName="password">
+                <label for="password">Şifre</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="login()">Giriş Yap</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        </form>
+    </main>
+</body>

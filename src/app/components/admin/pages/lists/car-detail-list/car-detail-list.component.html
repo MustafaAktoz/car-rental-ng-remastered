@@ -1,0 +1,33 @@
+<div>
+    <input type="text" id="filterText" [(ngModel)]="filterText" placeholder="Arama metni giriniz" class="form-control">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Marka</th>
+                <th>Renk</th>
+                <th>Model Yılı</th>
+                <th>Günlük Fiyat</th>
+                <th>Açıklama</th>
+                <th>Findeks Puanı</th>
+                <th>Seçenekler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carDetailDTO of carDetailDTOs|carDetailsFilter:filterText">
+                <td>{{carDetailDTO.id}}</td>
+                <td>{{carDetailDTO.name}}</td>
+                <td>{{carDetailDTO.brandName}}</td>
+                <td>{{carDetailDTO.colorName}}</td>
+                <td>{{carDetailDTO.modelYear}}</td>
+                <td>{{carDetailDTO.dailyPrice}}</td>
+                <td>{{carDetailDTO.description}}</td>
+                <td>{{carDetailDTO.findeksPoint}}</td>
+                <td>
+                    <app-update-car *ngIf="cars" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

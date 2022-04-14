@@ -1,4 +1,4 @@
-import { AddBrandPath, AddCarPath, AddColorPath, DeleteBrandPath, DeleteCarPath, DeleteColorPath, PayPath, RentByCarIdPath, UpdateBrandPath, UpdateCarPath, UpdateColorPath } from './../models/constants/paths';
+import { AddBrandPath, AddCarPath, AddColorPath, DeleteBrandPath, DeleteCarPath, DeleteColorPath, PayPath, RentByCarIdPath, UpdateBrandPath, UpdateCarPath, UpdateColorPath, LoginPath, RegisterPath, ProfilePath, HomePagePath } from './../models/constants/paths';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsByColorIdPath, CarDetailsPath, ColorListPath, CustomerListPath, RentalDetailListPath } from '../models/constants/paths';
@@ -9,6 +9,10 @@ import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsBy
 export class RouterService {
 
   constructor(private router: Router) { }
+
+  homePage(){
+    this.router.navigate([HomePagePath])
+  }
 
   addCarPage() {
     this.router.navigate([AddCarPath])
@@ -60,5 +64,17 @@ export class RouterService {
 
   paymentPage() {
     this.router.navigate([PayPath])
+  }
+
+  loginPage(){
+    this.router.navigate([LoginPath])
+  }
+
+  registerPage(){
+    this.router.navigate([RegisterPath])
+  }
+
+  profilePage(){
+    this.router.navigate([ProfilePath])
   }
 }

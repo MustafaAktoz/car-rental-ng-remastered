@@ -25,7 +25,7 @@ export class CarImagesSliderByCarIdComponent implements OnInit {
     })
   }
 
-  imageConfiguration(imagePath: string) {
+  getFullImagePath(imagePath: string) {
     return BaseUrl + imagePath;
   }
 

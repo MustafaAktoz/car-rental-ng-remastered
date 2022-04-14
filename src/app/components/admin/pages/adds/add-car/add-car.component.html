@@ -1,0 +1,44 @@
+<form [formGroup]="addFormGroup">
+    <div>
+        <label for="brandId">Marka</label>
+        <select id="brandId" name="brandId" class="form-select" formControlName="brandId">
+            <option *ngFor="let brand of brands" [value]="brand.id">{{brand.name}}</option>
+        </select>
+    </div>
+
+    <div class="mt-2">
+        <label for="colorId">Renk</label>
+        <select id="colorId" name="colorId" class="form-select" formControlName="colorId">
+            <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
+        </select>
+    </div>
+
+    <div class="mt-2">
+        <label for="name">Model</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Model" formControlName="name">
+    </div>
+
+    <div class="mt-2">
+        <label for="modelYear">Model Yılı</label>
+        <input type="text" id="modelYear" name="modelYear" class="form-control" placeholder="Model Yılı" formControlName="modelYear">
+    </div>
+
+    <div class="mt-2">
+        <label for="dailyPrice">Günlük Fiyat</label>
+        <input type="text" id="dailyPrice" name="dailyPrice" class="form-control" placeholder="Günlük Fiyat" formControlName="dailyPrice">
+    </div>
+
+    <div class="mt-2">
+        <label for="findeksPoint">Findeks Puanı</label>
+        <input type="number" id="findeksPoint" name="findeksPoint" class="form-control" placeholder="Findeks Puanı" formControlName="findeksPoint">
+    </div>
+
+    <div class="mt-2">
+        <label for="description">Açıklama</label>
+        <textarea type="text" id="description" name="description" class="form-control" placeholder="Açıklama" formControlName="description"></textarea>
+    </div>
+    
+    <div>
+        <button class="btn btn-success mt-2" (click)="add()">Ekle</button>
+    </div>
+</form>

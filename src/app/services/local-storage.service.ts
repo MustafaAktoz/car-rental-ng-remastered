@@ -23,7 +23,7 @@ export class LocalStorageService {
     return value;
   }
 
-  getByType<T>(key: string): T {
+  getWithType<T>(key: string): T {
     let json = localStorage.getItem(key)
     let value: T = Object.assign({}, JSON.parse(json))
     return value;

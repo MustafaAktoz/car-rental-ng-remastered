@@ -1,3 +1,21 @@
+## About
+
+This project is a remake of the project I completed earlier with cleaner codes.
+Purpose is code only, no visual goal.
+
+<!-- ## Images
+### Home Page
+<img src="readme-images/home-page.png">
+
+### Payment Page
+<img src="readme-images/payment.png">
+
+### Pay With Saved Card
+<img src="readme-images/pay-with-saved-card.png">
+
+### Change Password Page
+<img src="readme-images/change-password.png"> -->
+
 # CarRentalNgRemastered
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
