@@ -56,6 +56,8 @@ import { RouteToRentalDetailListPageButtonComponent } from './components/admin/l
 import { RouteToCustomerListPageButtonComponent } from './components/admin/layouts/router-buttons/route-to-customer-list-page-button/route-to-customer-list-page-button.component';
 import { AdministrationDropdownComponent } from './components/admin/layouts/administration-dropdown/administration-dropdown.component';
 import { RouteToHomePageButtonComponent } from './components/public/layouts/router-buttons/route-to-home-page-button/route-to-home-page-button.component';
+import { ShowPasswordOnHoverDirective } from './directives/show-password-on-hover.directive';
+import { SmallNumberInputComponent } from './form-controls/small-number-input/small-number-input.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +110,8 @@ import { RouteToHomePageButtonComponent } from './components/public/layouts/rout
     RouteToCustomerListPageButtonComponent,
     AdministrationDropdownComponent,
     RouteToHomePageButtonComponent,
+    ShowPasswordOnHoverDirective,
+    SmallNumberInputComponent,
   ],
   imports: [
     BrowserModule,

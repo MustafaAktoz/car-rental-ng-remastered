@@ -4,7 +4,7 @@
     </div>
     <hr>
     <div class="mt-4">
-        <form class="form-group" [formGroup]="payFormGroup">
+        <form [formGroup]="payFormGroup">
             <div>
                 <label for="fullName">Kart Üzerindeki İsim</label>
                 <input type="text" id="fullName" placeholder="Kart Üzerindeki Tam İsim" class="form-control"
@@ -15,24 +15,23 @@
                 <input type="text" id="cardNumber" placeholder="Kart Numarası" class="form-control"
                     formControlName="cardNumber">
             </div>
+            <div class="mt-2 row">
+                <div class="col">
+                    <label for="expiryMonth">Son Kullanım Ayı</label>
+                    <app-small-number-input id="expiryMonth" [minValue]="0" [maxValue]="10" placeholder="Son Kullanım Ayı" formControlName="expiryMonth"></app-small-number-input> 
+                </div>
+                <div class="col">
+                    <label for="expiryYear">Son Kullanım Yılı</label>
+                    <app-small-number-input type="text" id="expiryYear" placeholder="Son Kullanım Yılı" formControlName="expiryYear"></app-small-number-input>
+                </div>
+            </div>
             <div class="mt-2">
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" placeholder="CVV" class="form-control" formControlName="cvv">
-            </div>
-            <div class="mt-2">
-                <label for="expiryMonth">Son Kullanım Ayı</label>
-                <input type="text" id="expiryMonth" placeholder="Son Kullanım Ayı" class="form-control"
-                    formControlName="expiryMonth">
-            </div>
-            <div class="mt-2">
-                <label for="expiryYear">Son Kullanım Yılı</label>
-                <input type="text" id="expiryYear" placeholder="Son Kullanım Yılı" class="form-control"
-                    formControlName="expiryYear">
             </div>
             <div class="mt-2">
                 <button class="btn btn-success" (click)="pay()">Ödemeyi Tamamla</button>
             </div>
         </form>
     </div>
-
 </div>

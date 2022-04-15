@@ -29,9 +29,9 @@ export class PayComponent implements OnInit {
     this.payFormGroup = this.formBuilder.group({
       fullName: ["", Validators.required],
       cardNumber: ["", Validators.required],
-      cvv: ["", Validators.required],
       expiryMonth: ["", Validators.required],
       expiryYear: ["", Validators.required],
+      cvv: ["", Validators.required]
     })
   }
 
