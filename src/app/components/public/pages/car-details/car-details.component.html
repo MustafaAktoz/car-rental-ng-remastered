@@ -1,7 +1,10 @@
 <div>
-    <input type="text" id="filterText" name="filterText" class="form-control" placeholder="Arama metni giriniz" [(ngModel)]="filterText">
-    
-    <app-brand-and-color-select-option-car-filter></app-brand-and-color-select-option-car-filter>
+    <div>
+        <input type="text" id="filterText" name="filterText" class="form-control" placeholder="Arama metni giriniz" [(ngModel)]="filterText">
+    </div>
+    <div class="mt-1">
+        <app-brand-and-color-select-option-car-filter></app-brand-and-color-select-option-car-filter>
+    </div>
 
     <div class="row d-flex justify-content-between">
         <div class="card mt-4" style="width: 19rem;" *ngFor="let carDetailDTO of carDetailDTOs|carDetailsFilter:filterText">
