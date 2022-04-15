@@ -1,11 +1,11 @@
 <div>
     <label for="payments">Kayıtlı kartlar</label>
     <div id="payments" *ngFor="let payment of payments">
-        <div type="button" class="list-group-item" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+payment.id">
+        <div type="button" class="list-group-item" data-bs-toggle="modal" [attr.data-bs-target]="'#payWithSavedCardsModal'+payment.id">
             {{payment.fullName}} | {{payment.cardNumber}}</div>
 
         <!-- Modal -->
-        <div class="modal fade" [id]="'exampleModal'+payment.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" [id]="'payWithSavedCardsModal'+payment.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

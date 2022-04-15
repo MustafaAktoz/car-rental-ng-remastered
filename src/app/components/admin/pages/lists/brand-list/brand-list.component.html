@@ -13,7 +13,10 @@
                 <td>{{brand.id}}</td>
                 <td>{{brand.name}}</td>
                 <td>
-                    <app-update-brand [currentBrandFromParent]="brand"></app-update-brand>
+                    <div>
+                        <app-update-brand [currentBrandFromParent]="brand"></app-update-brand>
+                        <app-delete-brand [currentBrandFromParent]="brand"></app-delete-brand>
+                    </div>
                 </td>
             </tr>
         </tbody>

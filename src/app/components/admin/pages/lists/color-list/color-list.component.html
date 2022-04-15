@@ -12,7 +12,12 @@
             <tr *ngFor="let color of colors|colorsFilter:filterText">
                 <td>{{color.id}}</td>
                 <td>{{color.name}}</td>
-                <td><app-update-color [currentColorFromParent]="color"></app-update-color></td>
+                <td>
+                    <div>
+                        <app-update-color [currentColorFromParent]="color"></app-update-color>
+                        <app-delete-color [currentColorFromParent]="color"></app-delete-color>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

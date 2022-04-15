@@ -31,6 +31,13 @@ export class ColorService {
     }, errorResponse => this.templatesService.errorResponse(errorResponse));
   }
 
+  delete(color: Color) {
+    this.httpClient.post<ResponseModel>(this.url + "delete", color).subscribe(response => {
+      this.toastrService.success(response.message);
+      window.location.reload()
+    }, errorResponse => this.templatesService.errorResponse(errorResponse));
+  }
+
   getAll(): Observable<ListResponseModel<Color>> {
     return this.httpClient.get<ListResponseModel<Color>>(this.url + "getAll")
   }

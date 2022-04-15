@@ -25,7 +25,10 @@
                 <td>{{carDetailDTO.description}}</td>
                 <td>{{carDetailDTO.findeksPoint}}</td>
                 <td>
-                    <app-update-car *ngIf="cars" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car>
+                    <div *ngIf="cars">
+                        <app-update-car [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car>
+                        <app-delete-car [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-delete-car>
+                    </div>
                 </td>
             </tr>
         </tbody>

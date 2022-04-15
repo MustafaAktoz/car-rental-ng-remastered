@@ -1,12 +1,12 @@
 <!-- Button trigger modal -->
 <div *ngIf="loggedIn()">
-    <div type="button" class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModalEmail">
+    <div type="button" class="list-group-item" data-bs-toggle="modal" data-bs-target="#updateEmailModal">
         {{currentUserDTOFromParent.email}} / Güncelle
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="updateEmailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

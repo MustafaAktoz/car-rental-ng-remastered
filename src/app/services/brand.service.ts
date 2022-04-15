@@ -31,6 +31,13 @@ export class BrandService {
     },errorResponse=>this.templatesService.errorResponse(errorResponse));
   }
 
+  delete(brand: Brand) {
+    this.httpClient.post<ResponseModel>(this.url + "delete", brand).subscribe(response=>{
+      this.toastrService.success(response.message);
+      window.location.reload()
+    },errorResponse=>this.templatesService.errorResponse(errorResponse));
+  }
+
   getAll(): Observable<ListResponseModel<Brand>> {
     return this.httpClient.get<ListResponseModel<Brand>>(this.url + "getAll");
   }

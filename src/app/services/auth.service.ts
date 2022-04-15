@@ -43,6 +43,7 @@ export class AuthService {
 
   logout() {
     this.localStorageService.remove(TokenKey)
+    window.location.reload()
   }
 
   updatePassword(updatePasswordDTO: UpdatePasswordDTO) {
@@ -64,8 +65,8 @@ export class AuthService {
   get getCurrentUserId() {
 
     let decodedToken = this.getDecodedToken
-    let nameidentifier = Object.keys(decodedToken).filter(t => t.endsWith("/nameidentifier"))[0]
-    let userId: number = decodedToken[nameidentifier]
+    let nameidentifierString = Object.keys(decodedToken).filter(t => t.endsWith("/nameidentifier"))[0]
+    let userId: number = decodedToken[nameidentifierString]
     return userId
   }
 
@@ -79,11 +80,11 @@ export class AuthService {
 
     let decodedToken = this.getDecodedToken
 
-    let role = Object.keys(decodedToken).filter(t => t.endsWith("/role"))[0]
+    let roleString = Object.keys(decodedToken).filter(t => t.endsWith("/role"))[0]
 
-    if (role)
-      for (let i = 0; i < decodedToken[role].length; i++)
-        if (decodedToken[role][i] === AdminRole) return true
+    if (roleString)
+      for (let i = 0; i < decodedToken[roleString].length; i++)
+        if (decodedToken[roleString][i] === AdminRole) return true
 
     return false
   }

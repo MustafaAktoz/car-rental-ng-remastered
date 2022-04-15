@@ -58,6 +58,9 @@ import { AdministrationDropdownComponent } from './components/admin/layouts/admi
 import { RouteToHomePageButtonComponent } from './components/public/layouts/router-buttons/route-to-home-page-button/route-to-home-page-button.component';
 import { ShowPasswordOnHoverDirective } from './directives/show-password-on-hover.directive';
 import { SmallNumberInputComponent } from './form-controls/small-number-input/small-number-input.component';
+import { DeleteCarComponent } from './components/admin/layouts/deletes/delete-car/delete-car.component';
+import { DeleteBrandComponent } from './components/admin/layouts/deletes/delete-brand/delete-brand.component';
+import { DeleteColorComponent } from './components/admin/layouts/deletes/delete-color/delete-color.component';
 
 @NgModule({
   declarations: [
@@ -112,6 +115,9 @@ import { SmallNumberInputComponent } from './form-controls/small-number-input/sm
     RouteToHomePageButtonComponent,
     ShowPasswordOnHoverDirective,
     SmallNumberInputComponent,
+    DeleteCarComponent,
+    DeleteBrandComponent,
+    DeleteColorComponent,
   ],
   imports: [
     BrowserModule,

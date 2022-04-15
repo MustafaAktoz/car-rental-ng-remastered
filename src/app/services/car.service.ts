@@ -32,6 +32,13 @@ export class CarService {
     }, errorResponse => this.templatesService.errorResponse(errorResponse));
   }
 
+  delete(car: Car) {
+    this.httpClient.post<ResponseModel>(this.url + "delete", car).subscribe(response => {
+      this.toastrService.success(response.message)
+      window.location.reload()
+    }, errorResponse => this.templatesService.errorResponse(errorResponse));
+  }
+
   getAll(): Observable<ListResponseModel<Car>> {
     return this.httpClient.get<ListResponseModel<Car>>(this.url + "getAll")
   }
