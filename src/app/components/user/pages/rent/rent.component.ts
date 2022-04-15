@@ -33,7 +33,7 @@ export class RentComponent implements OnInit {
     this.createAddFormGroup()
     
     this.activatedRoute.params.subscribe(params => {
-      if (params[CarId]) this.currentCarId = params[CarId]
+      if (params[CarId]) this.currentCarId = Number(params[CarId])
     })
   }
 
@@ -48,8 +48,9 @@ export class RentComponent implements OnInit {
     if (this.addFormGroup.valid) {
 
       let rental: Rental = Object.assign({}, this.addFormGroup.value)
-      rental.carId = Number.parseInt(this.currentCarId.toString());
+      rental.carId = this.currentCarId
       rental.customerId = this.currentCustomer.id
+      rental.returnDate = rental.returnDate?rental.returnDate:null
       
       this.rentalService.rulesForAdding(rental).subscribe(response => {
         this.localStorageService.save(RentalKey, rental)
