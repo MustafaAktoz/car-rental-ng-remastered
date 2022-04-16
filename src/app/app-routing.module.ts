@@ -36,12 +36,12 @@ const routes: Routes = [
   { path: RentByCarIdPath + ":" + CarId, component: RentComponent, canActivate: [LoginGuard] },
   { path: PayPath, component: PayComponent, canActivate: [LoginGuard] },
   { path: AddCarPath, component: AddCarComponent, canActivate: [AdminGuard] },
+  { path: AddCarImageByCarIdPath + ":" + CarId, component: AddCarImageComponent },
   { path: AddBrandPath, component: AddBrandComponent, canActivate: [AdminGuard] },
   { path: AddColorPath, component: AddColorComponent, canActivate: [AdminGuard] },
   { path: LoginPath, component: LoginComponent, canActivate: [GuestGuard] },
   { path: RegisterPath, component: RegisterComponent, canActivate: [GuestGuard] },
   { path: ProfilePath, component: ProfileComponent, canActivate: [LoginGuard] },
-  { path: AddCarImageByCarIdPath + ":" + CarId, component: AddCarImageComponent },
 ];
 
 @NgModule({

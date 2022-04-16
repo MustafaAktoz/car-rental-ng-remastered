@@ -16,8 +16,8 @@ export class AddCarImageComponent implements OnInit {
   hasBaseDropZoneOver: boolean;
   response: string;
 
-  currentCarId:number
-  constructor(private carImageService: CarImageService, private toastrService: ToastrService, private activatedRoute: ActivatedRoute) {}
+  currentCarId: number
+  constructor(private carImageService: CarImageService, private toastrService: ToastrService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -26,13 +26,13 @@ export class AddCarImageComponent implements OnInit {
     })
   }
 
-  initializeUploader(carId:number) {
+  initializeUploader(carId: number) {
     this.uploader = new FileUploader({
       url: this.carImageService.url + "add?carId=" + carId,
       removeAfterUpload: true,
       allowedFileType: ["image"]
     });
-    
+
     this.onBefore()
 
     this.onError();
@@ -65,8 +65,9 @@ export class AddCarImageComponent implements OnInit {
   onError() {
     this.uploader.onErrorItem = (item, response) => {
       if (response) {
-        let newResponse: ResponseModel = JSON.parse(response)
-        this.toastrService.error(newResponse.message)
+        let newResponse: any = JSON.parse(response)
+        let message = newResponse.message ?? newResponse.Message
+        this.toastrService.error(message)
       }
     }
   }
