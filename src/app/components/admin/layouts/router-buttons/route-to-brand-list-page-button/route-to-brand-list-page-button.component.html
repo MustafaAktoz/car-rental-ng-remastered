@@ -1,3 +1,1 @@
-<div class="d-grid gap-2 col-12" *ngIf="isAdmin()">
-    <div (click)="routeToBrandListPage()" type="button">Marka Listesi</div>
-</div>
+<div type="button" (click)="routeToBrandListPage()" *ngIf="isAdmin()" [class]="classFromParent">Marka Listesi</div>

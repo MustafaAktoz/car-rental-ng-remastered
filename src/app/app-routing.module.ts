@@ -1,3 +1,4 @@
+import { AddCarImageComponent } from './components/admin/pages/adds/add-car-image/add-car-image.component';
 import { GuestGuard } from './guards/guest.guard';
 import { AdminGuard } from './guards/admin.guard';
 import { LoginGuard } from './guards/login.guard';
@@ -5,7 +6,7 @@ import { LoginComponent } from './components/public/pages/login/login.component'
 import { BrandId, ColorId, CarId } from './models/constants/entity-ids';
 import { AddCarComponent } from './components/admin/pages/adds/add-car/add-car.component';
 import { RentComponent } from './components/user/pages/rent/rent.component';
-import { CarDetailsPath, CarDetailsByBrandIdPath, CarDetailByIdPath, BrandListPath, ColorListPath, CustomerListPath, CarDetailListPath, RentalDetailListPath, CarDetailsByColorIdPath, RentByCarIdPath, PayPath, AddCarPath, AddBrandPath, AddColorPath, LoginPath, RegisterPath, ProfilePath, HomePagePath } from './models/constants/paths';
+import { CarDetailsPath, CarDetailsByBrandIdPath, CarDetailByIdPath, BrandListPath, ColorListPath, CustomerListPath, CarDetailListPath, RentalDetailListPath, CarDetailsByColorIdPath, RentByCarIdPath, PayPath, AddCarPath, AddBrandPath, AddColorPath, LoginPath, RegisterPath, ProfilePath, HomePagePath, AddCarImageByCarIdPath } from './models/constants/paths';
 import { RentalDetailListComponent } from './components/admin/pages/lists/rental-detail-list/rental-detail-list.component';
 import { CarDetailListComponent } from './components/admin/pages/lists/car-detail-list/car-detail-list.component';
 import { CustomerListComponent } from './components/admin/pages/lists/customer-list/customer-list.component';
@@ -27,19 +28,20 @@ const routes: Routes = [
   { path: CarDetailsByBrandIdPath + ":" + BrandId, component: CarDetailsComponent },
   { path: CarDetailsByColorIdPath + ":" + ColorId, component: CarDetailsComponent },
   { path: CarDetailByIdPath + ":" + CarId, component: CarDetailComponent },
-  { path: BrandListPath, component: BrandListComponent, canActivate:[AdminGuard] },
-  { path: ColorListPath, component: ColorListComponent, canActivate:[AdminGuard] },
-  { path: CustomerListPath, component: CustomerListComponent, canActivate:[AdminGuard] },
-  { path: CarDetailListPath, component: CarDetailListComponent, canActivate:[AdminGuard] },
-  { path: RentalDetailListPath, component: RentalDetailListComponent, canActivate:[AdminGuard] },
-  { path: RentByCarIdPath+ ":" + CarId, component: RentComponent, canActivate:[LoginGuard] },
-  { path: PayPath, component: PayComponent, canActivate:[LoginGuard] },
-  { path: AddCarPath, component: AddCarComponent, canActivate:[AdminGuard] },
-  { path: AddBrandPath, component: AddBrandComponent, canActivate:[AdminGuard] },
-  { path: AddColorPath, component: AddColorComponent, canActivate:[AdminGuard] },
-  { path: LoginPath, component: LoginComponent, canActivate:[GuestGuard] },
-  { path: RegisterPath, component: RegisterComponent, canActivate:[GuestGuard]  },
-  { path: ProfilePath, component: ProfileComponent, canActivate:[LoginGuard] },
+  { path: BrandListPath, component: BrandListComponent, canActivate: [AdminGuard] },
+  { path: ColorListPath, component: ColorListComponent, canActivate: [AdminGuard] },
+  { path: CustomerListPath, component: CustomerListComponent, canActivate: [AdminGuard] },
+  { path: CarDetailListPath, component: CarDetailListComponent, canActivate: [AdminGuard] },
+  { path: RentalDetailListPath, component: RentalDetailListComponent, canActivate: [AdminGuard] },
+  { path: RentByCarIdPath + ":" + CarId, component: RentComponent, canActivate: [LoginGuard] },
+  { path: PayPath, component: PayComponent, canActivate: [LoginGuard] },
+  { path: AddCarPath, component: AddCarComponent, canActivate: [AdminGuard] },
+  { path: AddBrandPath, component: AddBrandComponent, canActivate: [AdminGuard] },
+  { path: AddColorPath, component: AddColorComponent, canActivate: [AdminGuard] },
+  { path: LoginPath, component: LoginComponent, canActivate: [GuestGuard] },
+  { path: RegisterPath, component: RegisterComponent, canActivate: [GuestGuard] },
+  { path: ProfilePath, component: ProfileComponent, canActivate: [LoginGuard] },
+  { path: AddCarImageByCarIdPath + ":" + CarId, component: AddCarImageComponent },
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { AddBrandPath, AddCarPath, AddColorPath, DeleteBrandPath, DeleteCarPath, DeleteColorPath, PayPath, RentByCarIdPath, UpdateBrandPath, UpdateCarPath, UpdateColorPath, LoginPath, RegisterPath, ProfilePath, HomePagePath } from './../models/constants/paths';
+import { AddBrandPath, AddCarPath, AddColorPath, DeleteBrandPath, DeleteCarPath, DeleteColorPath, PayPath, RentByCarIdPath, UpdateBrandPath, UpdateCarPath, UpdateColorPath, LoginPath, RegisterPath, ProfilePath, HomePagePath, AddCarImageByCarIdPath, CarDetailByIdPath } from './../models/constants/paths';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { BrandListPath, CarDetailListPath, CarDetailsByBrandIdPath, CarDetailsByColorIdPath, CarDetailsPath, ColorListPath, CustomerListPath, RentalDetailListPath } from '../models/constants/paths';
@@ -10,12 +10,17 @@ export class RouterService {
 
   constructor(private router: Router) { }
 
-  homePage(){
+  homePage() {
     this.router.navigate([HomePagePath])
   }
 
   addCarPage() {
     this.router.navigate([AddCarPath])
+  }
+
+
+  addCarImagePageByCarId(carId: number) {
+    this.router.navigate([AddCarImageByCarIdPath + carId])
   }
 
   addBrandPage() {
@@ -34,6 +39,10 @@ export class RouterService {
     this.router.navigate([CarDetailsPath])
   }
 
+  carDetailPageById(id: number) {
+    this.router.navigate([CarDetailByIdPath + id])
+  }
+
   brandListPage() {
     this.router.navigate([BrandListPath])
   }
@@ -50,31 +59,31 @@ export class RouterService {
     this.router.navigate([CustomerListPath])
   }
 
-  carDetailsPageByBrandId(currentBrandId: number) {
-    if (currentBrandId > 0) this.router.navigate([CarDetailsByBrandIdPath + currentBrandId])
+  carDetailsPageByBrandId(brandId: number) {
+    if (brandId > 0) this.router.navigate([CarDetailsByBrandIdPath + brandId])
   }
 
-  carDetailsPageByColorId(currentColorId: number) {
-    if (currentColorId > 0) this.router.navigate([CarDetailsByColorIdPath + currentColorId])
+  carDetailsPageByColorId(colorId: number) {
+    if (colorId > 0) this.router.navigate([CarDetailsByColorIdPath + colorId])
   }
 
-  rentPage(currentCarId: number) {
-    if (currentCarId > 0) this.router.navigate([RentByCarIdPath + currentCarId])
+  rentPage(carId: number) {
+    if (carId > 0) this.router.navigate([RentByCarIdPath + carId])
   }
 
   paymentPage() {
     this.router.navigate([PayPath])
   }
 
-  loginPage(){
+  loginPage() {
     this.router.navigate([LoginPath])
   }
 
-  registerPage(){
+  registerPage() {
     this.router.navigate([RegisterPath])
   }
 
-  profilePage(){
+  profilePage() {
     this.router.navigate([ProfilePath])
   }
 }

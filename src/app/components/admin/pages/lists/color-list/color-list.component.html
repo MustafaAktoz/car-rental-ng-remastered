@@ -15,8 +15,8 @@
                 <td>{{color.name}}</td>
                 <td>
                     <div>
-                        <app-update-color [currentColorFromParent]="color"></app-update-color>
-                        <app-delete-color [currentColorFromParent]="color"></app-delete-color>
+                        <app-update-color classFromParent="btn btn-success" [currentColorFromParent]="color"></app-update-color>
+                        <app-delete-color classFromParent="btn btn-danger" [currentColorFromParent]="color"></app-delete-color>
                     </div>
                 </td>
             </tr>

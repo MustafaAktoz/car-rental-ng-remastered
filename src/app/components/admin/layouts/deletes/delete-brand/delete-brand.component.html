@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteBrandModal'+currentBrandFromParent.id">
+<button [class]="classFromParent" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteBrandModal'+currentBrandFromParent.id" *ngIf="isAdmin()">
     Sil
 </button>
   

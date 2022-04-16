@@ -14,8 +14,7 @@ export class CarDetailsComponent implements OnInit {
 
   filterText:string
   carDetailDTOs: CarDetailDTO[]
-  constructor(private carService: CarService, private activatedRoute: ActivatedRoute,
-    private router:Router) { }
+  constructor(private carService: CarService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -42,6 +41,4 @@ export class CarDetailsComponent implements OnInit {
       this.carDetailDTOs = response.data
     })
   }
-
-  routeToCarDetailById(id:number){this.router.navigate([CarDetailByIdPath+id])}
 }

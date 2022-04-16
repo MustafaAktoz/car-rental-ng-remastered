@@ -10,7 +10,7 @@
             <h5 class="card-title">{{carDetailDto.name}}</h5>
             <p class="card-text">{{carDetailDto.description}}</p>
             <p class="card-text">Findeks Puanı:<strong> {{carDetailDto.findeksPoint}}</strong></p>
-            <app-route-to-rent-page-button [currentCarIdFromParent]="carDetailDto.id"></app-route-to-rent-page-button>
+            <app-route-to-rent-page-button classFromParent="btn btn-success w-25" [currentCarIdFromParent]="carDetailDto.id"></app-route-to-rent-page-button>
         </div>
         <div class="card-footer text-muted">
             <strong>{{carDetailDto.dailyPrice|currency}}</strong>

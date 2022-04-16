@@ -1,3 +1,1 @@
-<div class="d-grid gap-2 col-12" *ngIf="!loggedIn()">
-    <button class="btn btn-success" (click)="routeToLoginPage()">Giriş Yap</button>
-</div>
+<div type="button" (click)="routeToLoginPage()" *ngIf="!loggedIn()" [class]="classFromParent">Giriş Yap</div>

@@ -1,3 +1,1 @@
-<div class="d-grid gap-2 col-12" *ngIf="isAdmin()">
-    <div (click)="routeToColorListPage()" type="button">Renk Listesi</div>
-</div>
+<div type="button" (click)="routeToColorListPage()" *ngIf="isAdmin()" [class]="classFromParent">Renk Listesi</div>

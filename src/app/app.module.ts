@@ -5,6 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -61,6 +62,13 @@ import { SmallNumberInputComponent } from './form-controls/small-number-input/sm
 import { DeleteCarComponent } from './components/admin/layouts/deletes/delete-car/delete-car.component';
 import { DeleteBrandComponent } from './components/admin/layouts/deletes/delete-brand/delete-brand.component';
 import { DeleteColorComponent } from './components/admin/layouts/deletes/delete-color/delete-color.component';
+import { AddCarImageComponent } from './components/admin/pages/adds/add-car-image/add-car-image.component';
+import { RouteToCarDetailPageButtonComponent } from './components/public/layouts/router-buttons/route-to-car-detail-page-button/route-to-car-detail-page-button.component';
+import { UserChildComponentBaseComponent } from './components/user/bases/user-child-component-base/user-child-component-base.component';
+import { PublicChildComponentBaseComponent } from './components/public/bases/public-child-component-base/public-child-component-base.component';
+import { CommonChildComponentBaseComponent } from './components/public/bases/common-child-component-base/common-child-component-base.component';
+import { AdminChildComponentBaseComponent } from './components/admin/bases/admin-child-component-base/admin-child-component-base.component';
+import { RouteToAddCarImagePageButtonComponent } from './components/admin/layouts/router-buttons/route-to-add-car-image-page-button/route-to-add-car-image-page-button.component';
 
 @NgModule({
   declarations: [
@@ -118,6 +126,13 @@ import { DeleteColorComponent } from './components/admin/layouts/deletes/delete-
     DeleteCarComponent,
     DeleteBrandComponent,
     DeleteColorComponent,
+    AddCarImageComponent,
+    RouteToAddCarImagePageButtonComponent,
+    AdminChildComponentBaseComponent,
+    UserChildComponentBaseComponent,
+    PublicChildComponentBaseComponent,
+    RouteToCarDetailPageButtonComponent,
+    CommonChildComponentBaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -128,7 +143,8 @@ import { DeleteColorComponent } from './components/admin/layouts/deletes/delete-
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FileUploadModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}

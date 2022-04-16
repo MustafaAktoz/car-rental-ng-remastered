@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../../services/auth.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -8,13 +9,14 @@ import { Color } from 'src/app/models/entities/color';
 import { BrandService } from 'src/app/services/brand.service';
 import { CarService } from 'src/app/services/car.service';
 import { ColorService } from 'src/app/services/color.service';
+import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-component-base/admin-child-component-base.component';
 
 @Component({
   selector: 'app-update-car',
   templateUrl: './update-car.component.html',
   styleUrls: ['./update-car.component.css']
 })
-export class UpdateCarComponent implements OnInit {
+export class UpdateCarComponent extends AdminChildComponentBaseComponent implements OnInit {
   @Input() currentCarFromParent: Car
 
   brands: Brand[]
@@ -22,7 +24,7 @@ export class UpdateCarComponent implements OnInit {
 
   updateFormGroup: FormGroup
   constructor(private carService: CarService, private formBuilder: FormBuilder, private brandService: BrandService,
-    private colorService: ColorService, private toastrService: ToastrService) { }
+    private colorService: ColorService, private toastrService: ToastrService, public override authService:AuthService) { super(authService) }
 
   ngOnInit(): void {
     this.getBrands()

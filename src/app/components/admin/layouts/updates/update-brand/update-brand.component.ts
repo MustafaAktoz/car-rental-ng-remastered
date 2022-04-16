@@ -1,20 +1,23 @@
+import { AuthService } from './../../../../../services/auth.service';
 import { FormIsMissing } from '../../../../../models/constants/messages';
 import { ToastrService } from 'ngx-toastr';
 import { BrandService } from 'src/app/services/brand.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { Brand } from 'src/app/models/entities/brand';
+import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-component-base/admin-child-component-base.component';
 
 @Component({
   selector: 'app-update-brand',
   templateUrl: './update-brand.component.html',
   styleUrls: ['./update-brand.component.css']
 })
-export class UpdateBrandComponent implements OnInit {
+export class UpdateBrandComponent extends AdminChildComponentBaseComponent implements OnInit {
   @Input() currentBrandFromParent: Brand
 
   updateFormGroup: FormGroup
-  constructor(private brandService: BrandService, private formBuilder: FormBuilder, private toastrService: ToastrService) { }
+  constructor(private brandService: BrandService, private formBuilder: FormBuilder, private toastrService: ToastrService,
+    public override authService:AuthService) { super(authService) }
 
   ngOnInit(): void {
     this.createUpdateFormGroup()
