@@ -29,7 +29,8 @@
                     <div *ngIf="cars">
                         <app-update-car classFromParent="btn btn-success" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car>
                         <app-delete-car classFromParent="btn btn-danger" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-delete-car>
-                        <app-route-to-add-car-image-page-button classFromParent="btn btn-primary" [currentCarIdFromParent]="carDetailDTO.id"></app-route-to-add-car-image-page-button>
+                        <app-route-to-add-car-image-page-button class="ms-2" classFromParent="btn btn-primary" [currentCarIdFromParent]="carDetailDTO.id"></app-route-to-add-car-image-page-button>
+                        <app-delete-car-image classFromParent="btn btn-danger" [currentCarImagesFromParent]="carDetailDTO.carImages">Resim Sil</app-delete-car-image>
                     </div>
                 </td>
             </tr>

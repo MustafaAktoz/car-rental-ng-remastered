@@ -69,6 +69,7 @@ import { PublicChildComponentBaseComponent } from './components/public/bases/pub
 import { CommonChildComponentBaseComponent } from './components/public/bases/common-child-component-base/common-child-component-base.component';
 import { AdminChildComponentBaseComponent } from './components/admin/bases/admin-child-component-base/admin-child-component-base.component';
 import { RouteToAddCarImagePageButtonComponent } from './components/admin/layouts/router-buttons/route-to-add-car-image-page-button/route-to-add-car-image-page-button.component';
+import { DeleteCarImageComponent } from './components/admin/layouts/deletes/delete-car-image/delete-car-image.component';
 
 @NgModule({
   declarations: [
@@ -133,6 +134,7 @@ import { RouteToAddCarImagePageButtonComponent } from './components/admin/layout
     PublicChildComponentBaseComponent,
     RouteToCarDetailPageButtonComponent,
     CommonChildComponentBaseComponent,
+    DeleteCarImageComponent,
   ],
   imports: [
     BrowserModule,

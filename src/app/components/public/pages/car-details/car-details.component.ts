@@ -1,7 +1,6 @@
 import { BrandId, ColorId } from './../../../../models/constants/entity-ids';
-import { CarDetailByIdPath } from './../../../../models/constants/paths';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { CarDetailDTO } from 'src/app/models/entities/dtos/car-detail-dto';
 import { CarService } from 'src/app/services/car.service';
 

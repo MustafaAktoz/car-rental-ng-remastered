@@ -1,3 +1,4 @@
+import { CarImage } from './../car-image';
 export interface CarDetailDTO{
     id:number
     name:string
@@ -7,4 +8,5 @@ export interface CarDetailDTO{
     dailyPrice:number
     description:string
     findeksPoint:number
+    carImages:CarImage[]
 }
