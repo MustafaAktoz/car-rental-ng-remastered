@@ -1,8 +1,6 @@
 <!-- Button trigger modal -->
-<div *ngIf="loggedIn()">
-    <div type="button" class="list-group-item" data-bs-toggle="modal" data-bs-target="#updateEmailModal">
-        {{currentUserDTOFromParent.email}} / Güncelle
-    </div>
+<div type="button" [class]="classFromParent" data-bs-toggle="modal" data-bs-target="#updateEmailModal" *ngIf="loggedIn()">
+    {{currentUserDTOFromParent.email}} / {{innerHTML}}
 </div>
 
 <!-- Modal -->

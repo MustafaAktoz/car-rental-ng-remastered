@@ -10,9 +10,10 @@
                 <th>Renk</th>
                 <th>Model Yılı</th>
                 <th>Günlük Fiyat</th>
-                <th>Açıklama</th>
                 <th>Findeks Puanı</th>
+                <th>Açıklama</th>
                 <th>Seçenekler</th>
+                <th>Ek Seçenekler</th>
             </tr>
         </thead>
         <tbody>
@@ -23,15 +24,19 @@
                 <td>{{carDetailDTO.colorName}}</td>
                 <td>{{carDetailDTO.modelYear}}</td>
                 <td>{{carDetailDTO.dailyPrice}}</td>
-                <td>{{carDetailDTO.description}}</td>
                 <td>{{carDetailDTO.findeksPoint}}</td>
+                <td>{{carDetailDTO.description}}</td>
                 <td>
                     <div *ngIf="cars">
                         <app-update-car classFromParent="btn btn-success" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-update-car>
                         <app-delete-car classFromParent="btn btn-danger" [currentCarFromParent]="getByIdFromInMemory(carDetailDTO.id)"></app-delete-car>
-                        <app-route-to-add-car-image-page-button class="ms-2" classFromParent="btn btn-primary" [currentCarIdFromParent]="carDetailDTO.id"></app-route-to-add-car-image-page-button>
-                        <app-delete-car-image classFromParent="btn btn-danger" [currentCarImagesFromParent]="carDetailDTO.carImages">Resim Sil</app-delete-car-image>
-                    </div>
+                    </div>  
+                </td>
+                <td>
+                    <div>
+                        <app-route-to-add-car-image-page-button classFromParent="btn btn-primary" [currentCarIdFromParent]="carDetailDTO.id" [innerHTML]="'Resim Ekle' + '(' + carDetailDTO.carImages.length + ')'"></app-route-to-add-car-image-page-button>
+                        <app-delete-car-image classFromParent="btn btn-danger" [currentCarImagesFromParent]="carDetailDTO.carImages" innerHTML="Resim Sil"></app-delete-car-image>
+                    </div>  
                 </td>
             </tr>
         </tbody>

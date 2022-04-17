@@ -11,7 +11,10 @@ import { PublicChildComponentBaseComponent } from '../../../bases/public-child-c
 export class RouteToRentPageButtonComponent extends PublicChildComponentBaseComponent implements OnInit {
   @Input() currentCarIdFromParent: number
   
-  constructor(private routerService: RouterService, public override authService:AuthService) { super(authService) }
+  constructor(private routerService: RouterService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML="Kirala"
+  }
 
   ngOnInit(): void {
   }

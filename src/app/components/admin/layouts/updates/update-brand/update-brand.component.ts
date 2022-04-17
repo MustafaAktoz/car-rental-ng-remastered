@@ -17,7 +17,10 @@ export class UpdateBrandComponent extends AdminChildComponentBaseComponent imple
 
   updateFormGroup: FormGroup
   constructor(private brandService: BrandService, private formBuilder: FormBuilder, private toastrService: ToastrService,
-    public override authService:AuthService) { super(authService) }
+    public override authService:AuthService) { 
+      super(authService) 
+      this.innerHTML = "Güncelle"
+    }
 
   ngOnInit(): void {
     this.createUpdateFormGroup()

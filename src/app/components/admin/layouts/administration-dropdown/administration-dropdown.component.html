@@ -1,6 +1,6 @@
 <div class="dropdown" *ngIf="isAdmin()">
-    <button class="btn dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-      Yönetim
+    <button [class]="classFromParent" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      {{innerHTML}}
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <li><app-route-to-add-car-page-button classFromParent="dropdown-item"></app-route-to-add-car-page-button></li>

@@ -24,7 +24,10 @@ export class UpdateCarComponent extends AdminChildComponentBaseComponent impleme
 
   updateFormGroup: FormGroup
   constructor(private carService: CarService, private formBuilder: FormBuilder, private brandService: BrandService,
-    private colorService: ColorService, private toastrService: ToastrService, public override authService:AuthService) { super(authService) }
+    private colorService: ColorService, private toastrService: ToastrService, public override authService:AuthService) { 
+      super(authService) 
+      this.innerHTML = "Güncelle"
+    }
 
   ngOnInit(): void {
     this.getBrands()

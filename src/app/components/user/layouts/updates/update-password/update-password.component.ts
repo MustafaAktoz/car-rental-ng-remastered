@@ -1,3 +1,4 @@
+import { UserChildComponentBaseComponent } from './../../../bases/user-child-component-base/user-child-component-base.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserDTO } from 'src/app/models/entities/dtos/user-dto';
@@ -11,18 +12,18 @@ import { UpdatePasswordDTO } from 'src/app/models/entities/dtos/update-password-
   templateUrl: './update-password.component.html',
   styleUrls: ['./update-password.component.css']
 })
-export class UpdatePasswordComponent implements OnInit {
+export class UpdatePasswordComponent extends UserChildComponentBaseComponent implements OnInit {
   @Input() currentUserDTOFromParent:UserDTO
 
   updateFormGroup:FormGroup
-  constructor(private formBuilder:FormBuilder,private authService:AuthService,private toastrService:ToastrService) { }
+  constructor(private formBuilder:FormBuilder, public override authService:AuthService,private toastrService:ToastrService) {
+    super(authService);
+    this.innerHTML = "Güncelle"
+    this.classFromParent = "list-group-item"
+  }
 
   ngOnInit(): void {
     this.createUpdateFormGroup();
-  }
-
-  loggedIn(){
-    return this.authService.loggedIn()
   }
 
   createUpdateFormGroup(){

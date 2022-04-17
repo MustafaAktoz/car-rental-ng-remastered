@@ -12,7 +12,10 @@ import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-com
 export class DeleteCarComponent extends AdminChildComponentBaseComponent implements OnInit {
   @Input() currentCarFromParent: Car
 
-  constructor(private carService: CarService, public override authService: AuthService) { super(authService) }
+  constructor(private carService: CarService, public override authService: AuthService) { 
+    super(authService) 
+    this.innerHTML="Sil"
+  }
 
   ngOnInit(): void {
   }

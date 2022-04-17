@@ -17,7 +17,10 @@ export class DeleteCarImageComponent extends AdminChildComponentBaseComponent im
   @Input() currentCarImagesFromParent: CarImage[]
 
   constructor(private carImageService: CarImageService, public override authService: AuthService,
-    private toastrService: ToastrService, private templatesService: TemplatesService) { super(authService) }
+    private toastrService: ToastrService, private templatesService: TemplatesService) {
+    super(authService)
+    this.innerHTML = "Sil"
+  }
 
   ngOnInit(): void {
   }

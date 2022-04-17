@@ -10,7 +10,10 @@ import { PublicChildComponentBaseComponent } from '../../../bases/public-child-c
 })
 export class RouteToRegisterPageButtonComponent extends PublicChildComponentBaseComponent implements OnInit {
 
-  constructor(private routerService: RouterService, public override authService: AuthService) { super(authService) }
+  constructor(private routerService: RouterService, public override authService: AuthService) { 
+    super(authService) 
+    this.innerHTML = "Kayıt Ol"
+  }
 
   ngOnInit(): void {
   }

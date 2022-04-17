@@ -12,7 +12,10 @@ import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-com
 export class DeleteColorComponent extends AdminChildComponentBaseComponent  implements OnInit {
   @Input() currentColorFromParent:Color
 
-  constructor(private colorService:ColorService, public override authService:AuthService) { super(authService) }
+  constructor(private colorService:ColorService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Sil"
+  }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" [class]="classFromParent" data-bs-toggle="modal" [attr.data-bs-target]="'#updateColorModal'+currentColorFromParent.id">
-    Güncelle
+<button type="button" [class]="classFromParent" data-bs-toggle="modal" [attr.data-bs-target]="'#updateColorModal'+currentColorFromParent.id" *ngIf="isAdmin()">
+    {{innerHTML}}
 </button>
 
 <!-- Modal -->

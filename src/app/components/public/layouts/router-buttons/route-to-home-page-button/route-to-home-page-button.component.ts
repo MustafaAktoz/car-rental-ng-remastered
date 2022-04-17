@@ -10,7 +10,10 @@ import { PublicChildComponentBaseComponent } from '../../../bases/public-child-c
 })
 export class RouteToHomePageButtonComponent extends PublicChildComponentBaseComponent implements OnInit {
   
-  constructor(private routerService: RouterService, public override authService:AuthService) { super(authService) }
+  constructor(private routerService: RouterService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Ana Sayfa"
+  }
 
   ngOnInit(): void {
   }

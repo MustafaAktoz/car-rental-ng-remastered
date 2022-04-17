@@ -10,7 +10,10 @@ import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-com
 })
 export class RouteToRentalDetailListPageButtonComponent extends AdminChildComponentBaseComponent implements OnInit {
 
-  constructor(private routerService:RouterService, public override authService:AuthService) { super(authService) }
+  constructor(private routerService:RouterService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Detaylı Kiralama Listesi"
+  }
 
   ngOnInit(): void {
   }

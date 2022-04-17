@@ -12,7 +12,10 @@ import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-com
 export class DeleteBrandComponent extends AdminChildComponentBaseComponent implements OnInit {
   @Input() currentBrandFromParent:Brand
 
-  constructor(private brandService:BrandService, public override authService:AuthService) { super(authService) }
+  constructor(private brandService:BrandService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Sil"
+  }
 
   ngOnInit(): void {
   }

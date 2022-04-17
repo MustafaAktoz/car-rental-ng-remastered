@@ -9,7 +9,10 @@ import { UserChildComponentBaseComponent } from '../../bases/user-child-componen
 })
 export class LogoutButtonComponent extends UserChildComponentBaseComponent implements OnInit {
 
-  constructor(public override authService:AuthService) { super(authService) }
+  constructor(public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Çıkış"
+  }
 
   ngOnInit(): void {
   }

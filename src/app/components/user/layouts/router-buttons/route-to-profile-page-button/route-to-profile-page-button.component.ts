@@ -10,12 +10,15 @@ import { UserChildComponentBaseComponent } from '../../../bases/user-child-compo
 })
 export class RouteToProfilePageButtonComponent extends UserChildComponentBaseComponent implements OnInit {
 
-  constructor(private routerService:RouterService, public override authService:AuthService) { super(authService) }
+  constructor(private routerService: RouterService, public override authService: AuthService) {
+    super(authService)
+    this.innerHTML = "Profil Bilgileri"
+  }
 
   ngOnInit(): void {
   }
 
-  routeToProfilePage(){
+  routeToProfilePage() {
     this.routerService.profilePage()
   }
 }

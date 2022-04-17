@@ -1,12 +1,11 @@
 <!-- Button trigger modal -->
-<div *ngIf="loggedIn()">
-    <div type="button" class="list-group-item" data-bs-toggle="modal" data-bs-target="#updateFirstAndLastNameModal">
-        {{currentUserDTOFromParent.firstName}} {{currentUserDTOFromParent.lastName}} / Güncelle
-    </div>
+<div type="button" [class]="classFromParent" data-bs-toggle="modal" data-bs-target="#updateFirstAndLastNameModal" *ngIf="loggedIn()">
+    {{currentUserDTOFromParent.firstName}} {{currentUserDTOFromParent.lastName}} / {{innerHTML}}
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="updateFirstAndLastNameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="updateFirstAndLastNameModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

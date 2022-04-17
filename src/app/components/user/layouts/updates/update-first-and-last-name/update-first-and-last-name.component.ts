@@ -1,3 +1,4 @@
+import { UserChildComponentBaseComponent } from './../../../bases/user-child-component-base/user-child-component-base.component';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -12,18 +13,18 @@ import { FormIsMissing } from 'src/app/models/constants/messages';
   templateUrl: './update-first-and-last-name.component.html',
   styleUrls: ['./update-first-and-last-name.component.css']
 })
-export class UpdateFirstAndLastNameComponent implements OnInit {
+export class UpdateFirstAndLastNameComponent extends UserChildComponentBaseComponent implements OnInit {
   @Input() currentUserDTOFromParent:UserDTO
 
   updateFormGroup:FormGroup
-  constructor(private formBuilder:FormBuilder,private authService:AuthService, private userService:UserService,private toastrService:ToastrService) { }
+  constructor(private formBuilder:FormBuilder, public override authService:AuthService, private userService:UserService,private toastrService:ToastrService) {
+    super(authService)
+    this.innerHTML = "Güncelle"
+    this.classFromParent = "list-group-item"
+  }
 
   ngOnInit(): void {
     this.createUpdateFormGroup();
-  }
-
-  loggedIn(){
-    return this.authService.loggedIn()
   }
 
   createUpdateFormGroup(){

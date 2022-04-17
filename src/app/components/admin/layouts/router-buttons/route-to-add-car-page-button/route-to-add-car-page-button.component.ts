@@ -10,7 +10,10 @@ import { AdminChildComponentBaseComponent } from '../../../bases/admin-child-com
 })
 export class RouteToAddCarPageButtonComponent extends AdminChildComponentBaseComponent implements OnInit {
 
-  constructor(private routerService:RouterService, public override authService:AuthService) { super(authService) }
+  constructor(private routerService:RouterService, public override authService:AuthService) { 
+    super(authService) 
+    this.innerHTML = "Araba Ekle"
+  }
 
   ngOnInit(): void {
   }

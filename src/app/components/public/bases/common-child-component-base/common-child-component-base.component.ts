@@ -1,5 +1,5 @@
 import { AuthService } from '../../../../services/auth.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-common-child-component-base',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CommonChildComponentBaseComponent {
   @Input() classFromParent: string
+  @Input() innerHTML: string
 
   constructor(public authService:AuthService){}
 }

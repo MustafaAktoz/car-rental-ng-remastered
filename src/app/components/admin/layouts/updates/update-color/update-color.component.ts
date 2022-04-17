@@ -17,7 +17,10 @@ export class UpdateColorComponent extends AdminChildComponentBaseComponent imple
 
   updateFormGroup: FormGroup
   constructor(private colorService: ColorService, private formBuilder: FormBuilder,private toastrService:ToastrService,
-    public override authService:AuthService) { super(authService) }
+    public override authService:AuthService) { 
+      super(authService) 
+      this.innerHTML = "Güncelle"
+    }
 
   ngOnInit(): void {
     this.createUpdateFormGroup();
