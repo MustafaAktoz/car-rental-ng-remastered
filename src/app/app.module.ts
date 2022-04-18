@@ -70,6 +70,7 @@ import { CommonChildComponentBaseComponent } from './components/public/bases/com
 import { AdminChildComponentBaseComponent } from './components/admin/bases/admin-child-component-base/admin-child-component-base.component';
 import { RouteToAddCarImagePageButtonComponent } from './components/admin/layouts/router-buttons/route-to-add-car-image-page-button/route-to-add-car-image-page-button.component';
 import { DeleteCarImageComponent } from './components/admin/layouts/deletes/delete-car-image/delete-car-image.component';
+import { DeletePaymentComponent } from './components/user/layouts/deletes/delete-payment/delete-payment.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +136,7 @@ import { DeleteCarImageComponent } from './components/admin/layouts/deletes/dele
     RouteToCarDetailPageButtonComponent,
     CommonChildComponentBaseComponent,
     DeleteCarImageComponent,
+    DeletePaymentComponent,
   ],
   imports: [
     BrowserModule,

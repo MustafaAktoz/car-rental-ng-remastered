@@ -25,6 +25,13 @@ export class PaymentService {
     },errorResponse=>this.templatesService.errorResponse(errorResponse))
   }
 
+  delete(payment:Payment){
+    this.httpClient.post<ResponseModel>(this.url+"delete",payment).subscribe(response=>{
+      this.toastrService.success(response.message)
+      window.location.reload()
+    },errorResponse=>this.templatesService.errorResponse(errorResponse))
+  }
+
   getAllByCustomerId(customerId:number){
     return this.httpClient.get<ListResponseModel<Payment>>(this.url+"getAllByCustomerId?customerId="+customerId)
   }

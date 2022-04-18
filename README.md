@@ -3,18 +3,25 @@
 This project is a remake of the project I completed earlier with cleaner codes.
 Purpose is code only, no visual goal.
 
--- ## Images
+## Images
 <img src="readme-images/homepage.png">
+<hr>
 <img src="readme-images/add-car.png">
+<hr>
 <img src="readme-images/add-car-image.png">
-<img src="readme-images/add-brand.png">
-<img src="readme-images/add-color.png">
+<hr>
 <img src="readme-images/update-car.png">
+<hr>
 <img src="readme-images/delete-car.png">
+<hr>
 <img src="readme-images/delete-car-image.png">
+<hr>
 <img src="readme-images/profile-info.png">
+<hr>
 <img src="readme-images/change-password.png">
+<hr>
 <img src="readme-images/pay.png">
+<hr>
 <img src="readme-images/pay-with-saved-card.png">
 
 
