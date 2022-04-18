@@ -3,18 +3,20 @@
 This project is a remake of the project I completed earlier with cleaner codes.
 Purpose is code only, no visual goal.
 
-<!-- ## Images
-### Home Page
-<img src="readme-images/home-page.png">
-
-### Payment Page
-<img src="readme-images/payment.png">
-
-### Pay With Saved Card
+-- ## Images
+<img src="readme-images/homepage.png">
+<img src="readme-images/add-car.png">
+<img src="readme-images/add-car-image.png">
+<img src="readme-images/add-brand.png">
+<img src="readme-images/add-color.png">
+<img src="readme-images/update-car.png">
+<img src="readme-images/delete-car.png">
+<img src="readme-images/delete-car-image.png">
+<img src="readme-images/profile-info.png">
+<img src="readme-images/change-password.png">
+<img src="readme-images/pay.png">
 <img src="readme-images/pay-with-saved-card.png">
 
-### Change Password Page
-<img src="readme-images/change-password.png"> -->
 
 # CarRentalNgRemastered
 
