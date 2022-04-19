@@ -42,8 +42,8 @@ export class UpdateCarComponent extends AdminChildComponentBaseComponent impleme
       name: [this.currentCarFromParent.name, Validators.required],
       modelYear: [this.currentCarFromParent.modelYear, Validators.required],
       dailyPrice: [this.currentCarFromParent.dailyPrice, Validators.required],
-      description: [this.currentCarFromParent.description, Validators.required],
       findeksPoint: [this.currentCarFromParent.findeksPoint, Validators.required],
+      description: [this.currentCarFromParent.description, Validators.required]
     })
   }
 

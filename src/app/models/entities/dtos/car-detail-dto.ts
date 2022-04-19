@@ -4,7 +4,7 @@ export interface CarDetailDTO{
     name:string
     brandName:string
     colorName:string
-    modelYear:string
+    modelYear:number
     dailyPrice:number
     description:string
     findeksPoint:number

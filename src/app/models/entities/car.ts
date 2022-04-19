@@ -3,7 +3,7 @@ export interface Car{
     brandId:number
     colorId:number
     name:string
-    modelYear:string
+    modelYear:number
     dailyPrice:number
     description:string
     findeksPoint:number
