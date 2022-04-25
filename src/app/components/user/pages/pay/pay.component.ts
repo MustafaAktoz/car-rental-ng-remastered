@@ -47,7 +47,7 @@ export class PayComponent implements OnInit {
   }
 
   askForSave(payment:Payment){
-    this.paymentService.checkIfThisCardIsAlreadyRegisteredForThisCustomer(payment).subscribe(response=>{
+    this.paymentService.checkIfThisCardIsAlreadySavedForThisCustomer(payment).subscribe(response=>{
       if (confirm(SaveYourCreditCard)) this.paymentService.add(payment);
     },errorResponse=>null)
   }

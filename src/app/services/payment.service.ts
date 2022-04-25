@@ -36,7 +36,7 @@ export class PaymentService {
     return this.httpClient.get<ListResponseModel<Payment>>(this.url+"getAllByCustomerId?customerId="+customerId)
   }
 
-  checkIfThisCardIsAlreadyRegisteredForThisCustomer(payment:Payment){
-    return this.httpClient.post<ResponseModel>(this.url+"checkIfThisCardIsAlreadyRegisteredForThisCustomer",payment);
+  checkIfThisCardIsAlreadySavedForThisCustomer(payment:Payment){
+    return this.httpClient.post<ResponseModel>(this.url+"checkIfThisCardIsAlreadySavedForThisCustomer",payment);
   }
 }
